@@ -1,0 +1,37 @@
+{
+  "name": "liri-node-app",
+  "version": "1.0.0",
+  "description": "A node app to communicate with spotify, ombd, or bandsintown",
+  "main": "bandsintown.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matttali09/liri-node-app.git"
+  },
+  "keywords": [
+    "query",
+    "api",
+    "requests",
+    "node",
+    "javascript",
+    "axios"
+  ],
+  "author": "Matt Taliancich",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/matttali09/liri-node-app/issues"
+  },
+  "homepage": "https://github.com/matttali09/liri-node-app#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "bandsintown": "^1.0.1",
+    "dotenv": "^6.2.0",
+    "inquirer": "^6.2.1",
+    "moment": "^2.22.2",
+    "node-spotify-api": "^1.0.7",
+    "omdb": "^0.8.0",
+    "spotify": "^0.3.0"
+  }
+}
