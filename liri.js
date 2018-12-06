@@ -27,7 +27,7 @@ inquirer.prompt([
 
 ]).then(function (user) {
 
-    // If the user guesses the password...
+    // if the user choises spotify liri greets them and then asks what song they would like to look up.
     if (user.doingWhat === "spotify") {
 
         console.log("==============================================");
@@ -50,7 +50,7 @@ inquirer.prompt([
                     .search({ type: 'track', query: user.input })
                     .then(function (response) {
 
-
+                        // display of requried results will add more options in future versions
                         console.log("|^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^|")
                         console.log(`Name Of Artists: ${response.tracks.items[0].artists[0].name}`)
                         console.log(`Name Of Song: ${response.tracks.items[0].name}`)
@@ -58,7 +58,38 @@ inquirer.prompt([
                         console.log(`From The Album: ${response.tracks.items[0].album.name}`)
                         console.log("|______________________________________|")
 
+
+                        // random song prompt
+                        inquirer.prompt([
+
+                            {
+                                type: "input",
+                                name: "rand",
+                                message: "Want to see a Random Song?(yes/no)"
+                            },
+                        ])
+                    
+                    .then(function (user) {
+                        var random = "I Want it That Way"
+                        // if the user presses yes
+                        user.rand.toLowerCase();
+                        if (user.rand == "yes" || user.rand == "y")
+                            spotify
+                                .search({ type: 'track', query: random })
+                                .then(function (response) {
+                                    console.log("|^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^|")
+                                    console.log(`Name Of Artists: ${response.tracks.items[0].artists[0].name}`)
+                                    console.log(`Name Of Song: ${response.tracks.items[0].name}`)
+                                    console.log(`Preview URL: ${response.tracks.items[0].preview_url}`)
+                                    console.log(`From The Album: ${response.tracks.items[0].album.name}`)
+                                    console.log("|______________________________________|")
+                                })
+                        else if (user.rand == "no" || user.rand == "n") {
+                            console.log("\nOk Come Ask Again Later :)\n")
+                        }
                     })
+                })
+
                     .catch(function (err) {
                         console.log(err);
                     });
@@ -67,7 +98,7 @@ inquirer.prompt([
     }
 
 
-    // If the user doesn't guess the password...
+    // if the user choises ombd liri greets them and then asks what movie they would like to look up.
     else if (user.doingWhat === "ombd") {
         console.log("==============================================");
         console.log("");
@@ -87,6 +118,7 @@ inquirer.prompt([
                 queryUrl = "http://www.omdbapi.com/?t=" + user.input + "&y=&plot=short&apikey=trilogy";
                 axios.get(queryUrl).then(
                     function (response) {
+                        // display of requried results will add more options in future versions
                         console.log("|^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^|");
 
                         console.log("Release Title: " + response.data.Title);
@@ -105,6 +137,7 @@ inquirer.prompt([
             }
             )
     }
+    // else if the user choises bandsintown liri greets them and then asks what band they would like to look up.
     else {
         console.log("==============================================");
         console.log("");
@@ -121,7 +154,7 @@ inquirer.prompt([
             },
         ])
             .then(function (user) {
-                // Then run a requst with the bandsintown api
+                // requst with the bandsintown api
                 var queryUrl = "https://rest.bandsintown.com/artists/" + user.input + "/events?app_id=codingbootcamp";
 
                 axios.get(queryUrl).then(
@@ -129,6 +162,7 @@ inquirer.prompt([
                         // console.log(response);
 
                         for (i = 0; i < response.data.length; i++) {
+                            // display of requried results will add more options in future versions
                             console.log("|^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^|")
                             console.log(`Artist Lineup: ${response.data[i].lineup.join(", ")}`)
                             console.log(`Venue Name: ${response.data[i].venue.name}`)
