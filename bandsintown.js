@@ -1,11 +1,11 @@
-// Include the axios and bandsintown npm package (Don't forget to run "npm install axios" in this folder first!)
+// Include the axios and moment npm package (Don't forget to run "npm install axios" in this folder first!)
 var axios = require("axios");
 var moment = require("moment")
 
-// Grab the movieName which will always be the third node argument.
-var bandName = process.argv[2];
+// Grab the bandName which will always be the third node argument.
+var bandName = process.argv.splice(2).join(" ");
 
-// Then run a request with axios to the OMDB API with the movie specified
+// Then run a request with axios to the bandsintown API with the bandspecified
 var queryUrl = "https://rest.bandsintown.com/artists/" + bandName + "/events?app_id=codingbootcamp";
 
 // This line is just to help us debug against the actual URL.

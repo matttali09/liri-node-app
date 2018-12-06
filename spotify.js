@@ -12,7 +12,7 @@ var spotify = new Spotify(keys.spotify)
 
 
 // Grab the trackName which will always be the third node argument
-var trackName = process.argv[2];
+var trackName = process.argv.splice(2).join(" ");
 
 spotify
 .search({ type: 'track', query: trackName })

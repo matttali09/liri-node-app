@@ -2,7 +2,7 @@
 var axios = require("axios");
 
 // Grab the movieName which will always be the third node argument.
-var movieName = process.argv[2];
+var movieName = process.argv.splice(2).join(" ");
 
 // Then run a request with axios to the OMDB API with the movie specified
 var queryUrl = "http://www.omdbapi.com/?t=" + movieName + "&y=&plot=short&apikey=trilogy";
