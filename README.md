@@ -7,12 +7,12 @@ Initially the user starts out by typing node liri and then it asks you your name
 
 Liri will prompt the user to access from Spotify API for a song with a random song 
 
-![screenshot2](images/screenshot2.PNG?raw=true "screenshot2")
+![screenshot2](images/ScreenShot2.PNG?raw=true "screenshot2")
 
 Liri will prompt the user to access movies from OMBD API
 
-![screenshot3](images/screenshot3.PNG?raw=true "screenshot3")
+![screenshot3](images/ScreenShot3.PNG?raw=true "screenshot3")
 
 Liri will prompt the user to access upcoming concert dates in Band In Town API!
 
-![screenshot4](images/screenshot4.PNG?raw=true "screenshot4")
+![screenshot4](images/ScreenShot4.PNG?raw=true "screenshot4")
