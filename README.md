@@ -12,7 +12,7 @@ Liri will prompt the user to choose which api to pull from.
 
 Liri will prompt the user to access movies from OMBD API.
 
-![screenshot3](images/ScreenShot3.PNG?raw=true "screenshot3")
+![lirigif3](images/lirigif3.gif?raw=true "lirigif3")
 
 Liri will prompt the user to access upcoming concert dates in Band In Town API!
 
