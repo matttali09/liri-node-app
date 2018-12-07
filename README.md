@@ -17,3 +17,7 @@ Liri will prompt the user to access movies from OMBD API.
 Liri will prompt the user to access upcoming concert dates in Band In Town API!
 
 ![screenshot4](images/ScreenShot4.PNG?raw=true "screenshot4")
+
+If The user knows which Api it they want to pull from they can skip the prompts by noding that js file!
+
+![screenshot5](images/ScreenShot5.PNG?raw=true "screenshot5")
