@@ -2,14 +2,15 @@
 liri node app to search Spotify for songs, Bands in Town for concerts, and OMDB for movies
 
 Initially the user starts out by typing node liri and then it asks you your name.
+Liri Greets you and searches from it's directory for what you are looking for.
 
 ![screenshot1](assets/images/screenshot1.PNG?raw=true "screenshot1")
 
-Liri will prompt the user to access from Spotify API for a song with a random song 
+Liri will prompt the user to choose which api to pull from. 
 
 ![screenshot2](assets/images/screenshot2.PNG?raw=true "screenshot2")
 
-Liri will prompt the user to access movies from OMBD API
+Liri will prompt the user to access movies from OMBD API.
 
 ![screenshot3](assets/images/screenshot3.PNG?raw=true "screenshot3")
 
