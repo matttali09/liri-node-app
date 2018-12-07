@@ -3,7 +3,7 @@ liri node app to search Spotify for songs, Bands in Town for concerts, and OMDB 
 
 Initially the user starts out by typing node liri and then it asks you your name.
 
-![screenshot1](images/screenshot1.PNG?raw=true "screenshot1")
+![screenshot1](images/ScreenShot1.PNG?raw=true "screenshot1")
 
 Liri will prompt the user to access from Spotify API for a song with a random song 
 
